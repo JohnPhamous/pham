@@ -1,0 +1,96 @@
+{
+  "name": "john",
+  "version": "0.0.1",
+  "description": "Personal npm card for John Pham (@JohnPhamous)",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JohnPhamous/john.git"
+  },
+  "scripts": {
+    "prepare": "node src/htmlify",
+    "prepublishOnly": "webpack"
+  },
+  "bin": {
+    "john": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "index.html"
+  ],
+  "keywords": [
+    "card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
+  ],
+  "author": "John Pham",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "ansi-to-html": "^0.6.9",
+    "babel-loader": "^8.0.4",
+    "boxen": "^2.1.0",
+    "chalk": "^2.4.1",
+    "lodash.get": "^4.4.2",
+    "webpack": "^4.28.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2"
+  },
+  "myCard": {
+    "info": {
+      "name": "John Pham",
+      "handle": "JohnPhamous",
+      "twitter": "JohnPhamous",
+      "npm": "JohnPhamous",
+      "github": "JohnPhamous",
+      "linkedin": "JohnPhamous",
+      "web": "pham.codes",
+      "work": "Software Engineer"
+    },
+    "data": [
+      "          <white>{{name}}</><green> / </><cyan>{{handle}}</>",
+      "",
+      {
+        "label": "<blue>Work</>",
+        "text": "{{work}}"
+      },
+      "",
+      {
+        "label": "Twitter",
+        "text": "https://twitter.com/<cyan>{{twitter}}</>",
+        "when": "{{twitter}}"
+      },
+      {
+        "label": "npm",
+        "text": "https://www.npmjs.com/<red>~{{npm}}</>",
+        "when": "{{npm}}"
+      },
+      {
+        "label": "GitHub",
+        "text": "https://github.com/<green>{{github}}</>",
+        "when": "{{github}}"
+      },
+      {
+        "label": "LinkedIn",
+        "text": "https://www.linkedin.com/in/<blue>{{linkedin}}</>",
+        "when": "{{linkedin}}"
+      },
+      {
+        "label": "Web",
+        "text": "<cyan>{{web}}</>",
+        "when": "{{web}}"
+      },
+      "",
+      {
+        "label": "Card",
+        "text": "<red>npx</> {{_packageName}}"
+      }
+    ]
+  }
+}
