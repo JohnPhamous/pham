@@ -5,7 +5,7 @@
 Via npx:
 
 ```bash
-npx john
+npx pham
 ```
 
 # Other
